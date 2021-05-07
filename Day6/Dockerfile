@@ -4,6 +4,7 @@ WORKDIR /usr/src/app
 # Install app dependencies
 COPY package*.json ./
 RUN apt-get -y update
+RUN apt-get install -y nodejs
 RUN npm i express
 # Bundle app source
 COPY . .
