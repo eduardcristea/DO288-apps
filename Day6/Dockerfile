@@ -1,8 +1,9 @@
-FROM node:14
+FROM ubuntu:20.04
 # Create app directory
 WORKDIR /usr/src/app
 # Install app dependencies
 COPY package*.json ./
+RUN apt-get -y update
 RUN npm i express
 # Bundle app source
 COPY . .
