@@ -1,8 +1,7 @@
-FROM node:latest
+FROM mysql:latest
 # Create app directory
 WORKDIR /usr/src/app
 # Install app dependencies
-COPY package*.json ./
 COPY test.sql ./
 RUN npm i express
 # Bundle app source
