@@ -4,7 +4,8 @@ WORKDIR /usr/src/app
 # Install app dependencies
 COPY package*.json ./
 COPY test.sql ./
-RUN npm i express
+RUN npm install express
+RUN npm install mysql 
 # Bundle app source
 COPY . .
 EXPOSE 3000
