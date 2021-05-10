@@ -1,10 +1,5 @@
 FROM mysql:latest
-# Create app directory
-WORKDIR /usr/src/app
-# Install app dependencies
-COPY test.sql ./
-RUN npm i express
-# Bundle app source
+ENV MYSQL_USER=eduard
+ENV MYSQL_PASSWORD=8d3cc543
+ENV MYSQL_DATABASE=test
 COPY . .
-EXPOSE 3000
-CMD [ "node", "server.js"]
