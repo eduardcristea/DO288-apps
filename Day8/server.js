@@ -1,7 +1,3 @@
-var mysql = require('mysql');
-process.on('uncaughtException', (err) => {
- console.log(`Caught exception: ${err}`);
-});
 const express = require('express')
 const app = express()
 const port = 3000
