@@ -3,7 +3,6 @@ FROM node:latest
 WORKDIR /usr/src/app
 # Install app dependencies
 COPY . .
-ENV /conf-nodegees.yaml
 RUN npm install express
 RUN npm install mysql 
 # Bundle app source
