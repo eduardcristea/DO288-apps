@@ -7,9 +7,9 @@ const app = express()
 const port = 3000
 app.get('/', (req, res) =>{
 var con = mysql.createConnection({
- host: 'eschiuel' ,
- user: process.env.nodegees-user ,
- password: process.env.nodegees-password ,
+ host: 'openshift-day8-sql.day8-openshift.svc',
+ user: 'openshift',
+ password: 'testpass',
  database: 'test' 
 });
 con.connect(function(err) {
